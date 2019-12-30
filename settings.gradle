@@ -1,0 +1,2 @@
+include ':app', ':bootlib'
+rootProject.name='android-bootlib'

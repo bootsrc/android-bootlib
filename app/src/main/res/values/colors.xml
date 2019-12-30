@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/action_bar_bg</color>
+    <color name="colorPrimaryDark">@color/action_bar_bg</color>
+    <color name="colorAccent">#D81B60</color>
+
+</resources>
