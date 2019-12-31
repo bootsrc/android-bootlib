@@ -14,9 +14,11 @@ import com.bootsrc.bootlib.R2;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 public abstract class BootActivity extends AppCompatActivity {
     protected String defaultTitle = "";
+    private Unbinder unbinder;
 
     @BindView(R2.id.toolbar)
     public Toolbar toolbar;
@@ -25,7 +27,7 @@ public abstract class BootActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
-        ButterKnife.bind(this);
+        unbinder = ButterKnife.bind(this);
         toolbar.setTitle(defaultTitle);
         setSupportActionBar(toolbar);
     }
@@ -73,6 +75,7 @@ public abstract class BootActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         onFinish();
+        unbinder.unbind();
     }
 
     protected void setToolBarTitle(String title) {

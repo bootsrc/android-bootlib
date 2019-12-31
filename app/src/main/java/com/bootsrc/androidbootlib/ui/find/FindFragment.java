@@ -23,7 +23,7 @@ public class FindFragment extends Fragment {
         dashboardViewModel =
                 ViewModelProviders.of(this).get(FindViewModel.class);
         View root = inflater.inflate(R.layout.fragment_find, container, false);
-        final TextView textView = root.findViewById(R.id.text_dashboard);
+        final TextView textView = root.findViewById(R.id.text_find);
         dashboardViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {

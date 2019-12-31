@@ -21,6 +21,7 @@
     <string-array name="home_titles">
         <item>@string/menu_home</item>
         <item>@string/menu_find</item>
+        <item>@string/menu_msg</item>
         <item>@string/menu_mine</item>
     </string-array>
 

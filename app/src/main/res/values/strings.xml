@@ -1,13 +1,10 @@
 <resources>
     <string name="app_name">android-bootlib</string>
 
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-
     <string name="app_version">1.0</string>
 
     <string name="menu_home">首页</string>
     <string name="menu_find">发现</string>
+    <string name="menu_msg">消息</string>
     <string name="menu_mine">我</string>
 </resources>
