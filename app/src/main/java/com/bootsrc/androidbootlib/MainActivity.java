@@ -3,6 +3,7 @@ package com.bootsrc.androidbootlib;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.bootsrc.androidbootlib.consts.FragmentCode;
 import com.bootsrc.androidbootlib.ui.msg.MsgFragment;
@@ -33,6 +34,7 @@ public class MainActivity extends BootActivity implements BottomNavigationView.O
     private ExploreFragment exploreFragment;
     private MineFragment mineFragment;
     private MsgFragment msgFragment;
+    private long lastClickBackTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,16 +88,14 @@ public class MainActivity extends BootActivity implements BottomNavigationView.O
         return false;
     }
 
-    /**
-     * 菜单、返回键响应
-     */
     @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-//        if (keyCode == android.view.KeyEvent.KEYCODE_BACK) {
-//            ClickUtils.exitBy2Click(2000, this);
-//        }
-        onBackPressed();
-        return true;
+    public void onBackPressed() {
+        if (System.currentTimeMillis() - lastClickBackTime > 2000) { // 后退阻断
+            Toast.makeText(this, "再按一次退出", Toast.LENGTH_SHORT).show();
+            lastClickBackTime = System.currentTimeMillis();
+        } else { // 关掉app
+            super.onBackPressed();
+        }
     }
 
     @Override
