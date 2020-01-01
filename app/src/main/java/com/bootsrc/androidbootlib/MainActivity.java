@@ -1,7 +1,6 @@
 package com.bootsrc.androidbootlib;
 
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.widget.Toast;
 
