@@ -6,7 +6,7 @@ import android.view.MenuItem;
 
 import com.bootsrc.androidbootlib.consts.FragmentCode;
 import com.bootsrc.androidbootlib.ui.msg.MsgFragment;
-import com.bootsrc.androidbootlib.ui.find.FindFragment;
+import com.bootsrc.androidbootlib.ui.explore.ExploreFragment;
 import com.bootsrc.androidbootlib.ui.home.HomeFragment;
 import com.bootsrc.androidbootlib.ui.mine.MineFragment;
 import com.bootsrc.bootlib.base.BootActivity;
@@ -30,7 +30,7 @@ public class MainActivity extends BootActivity implements BottomNavigationView.O
     private String[] mTitles;
     private FragmentManager fManager;
     private HomeFragment homeFragment;
-    private FindFragment findFragment;
+    private ExploreFragment exploreFragment;
     private MineFragment mineFragment;
     private MsgFragment msgFragment;
 
@@ -73,8 +73,8 @@ public class MainActivity extends BootActivity implements BottomNavigationView.O
             case R.id.item_home:
                 setChioceItem(FragmentCode.HOME);
                 return true;
-            case R.id.item_find:
-                setChioceItem(FragmentCode.FIND);
+            case R.id.item_explore:
+                setChioceItem(FragmentCode.EXPLORE);
                 return true;
             case R.id.item_msg:
                 setChioceItem(FragmentCode.MSG);
@@ -116,12 +116,12 @@ public class MainActivity extends BootActivity implements BottomNavigationView.O
                 }
                 break;
 
-            case FragmentCode.FIND:
-                if (findFragment == null) {
-                    findFragment = new FindFragment();
-                    transaction.add(R.id.nav_host_fragment, findFragment);
+            case FragmentCode.EXPLORE:
+                if (exploreFragment == null) {
+                    exploreFragment = new ExploreFragment();
+                    transaction.add(R.id.nav_host_fragment, exploreFragment);
                 } else {
-                    transaction.show(findFragment);
+                    transaction.show(exploreFragment);
                 }
                 break;
 
@@ -150,8 +150,8 @@ public class MainActivity extends BootActivity implements BottomNavigationView.O
         if (homeFragment != null) {
             transaction.hide(homeFragment);
         }
-        if (findFragment != null) {
-            transaction.hide(findFragment);
+        if (exploreFragment != null) {
+            transaction.hide(exploreFragment);
         }
         if (msgFragment != null) {
             transaction.hide(msgFragment);

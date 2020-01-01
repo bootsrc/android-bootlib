@@ -5,22 +5,22 @@
     tools:context=".MainActivity">
     <item
         android:id="@+id/item_home"
-        android:icon="@drawable/ic_home_light_blue_500_24dp"
+        android:icon="@drawable/ic_home_blue_24dp"
         android:title="@string/menu_home" />
 
     <item
-        android:id="@+id/item_find"
-        android:icon="@drawable/ic_explore_blue_500_24dp"
-        android:title="@string/menu_find" />
+        android:id="@+id/item_explore"
+        android:icon="@drawable/ic_explore_blue_24dp"
+        android:title="@string/menu_explore" />
 
     <item
         android:id="@+id/item_msg"
-        android:icon="@drawable/ic_message_blue_500_24dp"
+        android:icon="@drawable/ic_message_blue_24dp"
         android:title="@string/menu_msg" />
 
     <item
         android:id="@+id/item_mine"
-        android:icon="@drawable/ic_person_blue_500_24dp"
+        android:icon="@drawable/ic_person_blue_24dp"
         android:title="@string/menu_mine" />
 
 </menu>

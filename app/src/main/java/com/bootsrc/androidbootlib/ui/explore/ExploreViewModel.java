@@ -1,16 +1,16 @@
-package com.bootsrc.androidbootlib.ui.find;
+package com.bootsrc.androidbootlib.ui.explore;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class FindViewModel extends ViewModel {
+public class ExploreViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public FindViewModel() {
+    public ExploreViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is find fragment");
+        mText.setValue("This is explore fragment");
     }
 
     public LiveData<String> getText() {

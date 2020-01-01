@@ -1,4 +1,4 @@
-package com.bootsrc.androidbootlib.ui.find;
+package com.bootsrc.androidbootlib.ui.explore;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,15 +14,15 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.bootsrc.androidbootlib.R;
 
-public class FindFragment extends Fragment {
+public class ExploreFragment extends Fragment {
 
-    private FindViewModel dashboardViewModel;
+    private ExploreViewModel dashboardViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         dashboardViewModel =
-                ViewModelProviders.of(this).get(FindViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_find, container, false);
+                ViewModelProviders.of(this).get(ExploreViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_explore, container, false);
         final TextView textView = root.findViewById(R.id.text_find);
         dashboardViewModel.getText().observe(this, new Observer<String>() {
             @Override
